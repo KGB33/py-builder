@@ -17,6 +17,7 @@ Pairs nicely with [brettcannon/python-launcher](https://github.com/brettcannon/p
 
 # Bonus TODOs:
   - [ ] Add Rich/textual support???
+    - [ ] emojis?
   - [ ] Add regex tag search functionality.
   - [ ] Pass addtional options to `./configure`, `make`, and `make altinstall`
     - See https://docs.python.org/3/using/configure.html#configure-options
