@@ -2,10 +2,9 @@
 Builds & creates an altInstall for CPython from source.
 """
 import argparse
-import sys
 import os
 import subprocess
-
+import sys
 from pathlib import Path
 
 VERBOSE = False

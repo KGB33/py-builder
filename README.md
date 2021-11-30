@@ -1,18 +1,18 @@
-# Py-Builder 
+# Py-Builder
 A simple command line tool to build CPython from source.
 
 Pairs nicely with [brettcannon/python-launcher](https://github.com/brettcannon/python-launcher).
 
 # TODO:
-  - Documentation 
-  - Verbose flag 
+  - Documentation
+  - Verbose flag
   - Dryrun flag
     - Wrap all `subprocess.run` calls in a custom function?
   - Clone Functionality
     - Cache in `XDG_CACHE_HOME` unless overidden in Configuration.
   - Configuration file ( Should be in `XDG_CONFIG_HOME` by default)
   - `pipx` installable.
-  - `pre-commit` stuff.
+  - [x] `pre-commit` stuff.
 
 # Bonus TODOs:
   - Add Rich/textual support???
