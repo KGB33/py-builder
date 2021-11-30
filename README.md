@@ -13,6 +13,7 @@ Pairs nicely with [brettcannon/python-launcher](https://github.com/brettcannon/p
   - [ ] Configuration file ( Should be in `XDG_CONFIG_HOME` by default)
   - [ ] `pipx` installable.
   - [x] `pre-commit` stuff.
+  - [ ] Better Tracebacks
 
 # Bonus TODOs:
   - [ ] Add Rich/textual support???
