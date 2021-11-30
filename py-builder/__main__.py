@@ -69,24 +69,25 @@ def build(tag: str):
         stderr=subprocess.DEVNULL,
     )
 
-    print("\tconfiguring...")
+    print("\tConfiguring...")
     subprocess.run(["./configure"], cwd=CPY_DIR, check=True, stdout=subprocess.DEVNULL)
 
-    print(f"\trunning 'make'...")
+    print(f"\tRunning 'make'...")
     subprocess.run(
         ["make"],
         cwd=CPY_DIR,
         check=True,
         stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
     )
 
     if os.geteuid() != 0:
-        print("Need elevated permissions to create altinstall")
+        print("Running 'make altinstall' with Sudo")
         make_args = ["sudo", "make", "altinstall"]
     else:
+        print(f"\tRunning 'make altinstall'...")
         make_args = ["make", "altinstall"]
 
-    print(f"\trunning 'make altinstall'...")
     subprocess.run(
         make_args,
         cwd=CPY_DIR,
@@ -149,6 +150,12 @@ if __name__ == "__main__":
 
     DRYRUN = args.dryrun
     VERBOSE = args.verbose
+
+    if DRYRUN:
+        raise NotImplementedError("Dryrun is WIP")
+
+    if VERBOSE:
+        print("INFO :: Verbose is WIP, default is maximum verbosity")
 
     check_repo_exists(args.clone)
     build(args.tag)
