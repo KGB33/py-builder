@@ -22,8 +22,8 @@ def check_repo_exists(clone: bool):
             check_repo_exists(False)
         else:
             raise FileNotFoundError(
-            f"Cannot find CPython repository at {CPY_DIR}, pass '--clone' to download"
-        )
+                f"Cannot find CPython repository at {CPY_DIR}, pass '--clone' to download"
+            )
 
 
 def clone_repo():
