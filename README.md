@@ -8,8 +8,8 @@ Pairs nicely with [brettcannon/python-launcher](https://github.com/brettcannon/p
   - [ ] Verbose flag
   - [ ] Dryrun flag
     - Wrap all `subprocess.run` calls in a custom function?
-  - [ ] Clone Functionality
-    - Cache in `XDG_CACHE_HOME` unless overidden in Configuration.
+  - [x] Clone Functionality
+    - [x] Cache in `XDG_CACHE_HOME` unless overidden in Configuration.
   - [ ] Configuration file ( Should be in `XDG_CONFIG_HOME` by default)
   - [ ] `pipx` installable.
   - [x] `pre-commit` stuff.

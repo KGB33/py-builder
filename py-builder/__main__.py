@@ -10,7 +10,8 @@ from pathlib import Path
 VERBOSE = False
 DRYRUN = False
 
-CPY_DIR = Path("./cpython")
+CPY_REMOTE = "git@github.com:python/cpython.git"
+CPY_DIR = Path(f"{os.getenv('XDG_CACHE_HOME', '.')}/cpython")
 
 
 def check_repo_exists(clone: bool):
@@ -18,13 +19,15 @@ def check_repo_exists(clone: bool):
     if not exists:
         if clone:
             clone_repo()
-        raise FileNotFoundError(
+            check_repo_exists(False)
+        else:
+            raise FileNotFoundError(
             f"Cannot find CPython repository at {CPY_DIR}, pass '--clone' to download"
         )
 
 
 def clone_repo():
-    raise NotImplementedError("Cloning functionally is WIP")
+    subprocess.run(args=["git", "clone", CPY_REMOTE], cwd=CPY_DIR.parent)
 
 
 def update_repo():
