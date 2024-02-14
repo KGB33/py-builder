@@ -1,3 +1,9 @@
+## Archived
+
+Nix solves this problem better than my scripts.
+
+---
+
 # Py-Builder
 A simple command line tool to build CPython from source.
 
